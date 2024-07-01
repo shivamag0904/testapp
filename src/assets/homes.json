@@ -1,0 +1,19 @@
+     [{
+        "title":"Home 1",
+        "image": "assets/listing.png",
+        "location": "new york",
+        "price":"123"
+      },
+      {
+        "title":"Home 2",
+        "image": "assets/listing.png",
+        "location":"boston",
+        "price":"113"
+      },
+      {
+        "title":"Home 3",
+        "image": "assets/listing.png",
+        "location": "chicago",
+        "price":"173"
+      }
+    ]
