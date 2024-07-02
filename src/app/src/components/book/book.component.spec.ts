@@ -95,6 +95,25 @@ beforeEach(async ()=>{
     expect(el('[data-test="total"]').textContent).toContain('Total: $369');
 
   });
+
+  it('should show -- for total when dates are Invalid',()=>{
+
+    // user enter check in date: 12/20/19
+    const checkIn = el('[data-test="check-in"] input');
+    checkIn.value = '';
+    checkIn.dispatchEvent(new Event('input'));
+
+    // user enter check out data: 12/23/19
+    const checkOut = el('[data-test="check-out"] input');
+    checkOut.value = '';
+    checkOut.dispatchEvent(new Event('input'));
+
+    fixture.detectChanges();
+
+    // assert that the total shows 3*123 = 369
+    expect(el('[data-test="total"]').textContent).toContain('Total: $--');
+
+  });
   
   it('should show book home after clicking the book',()=>{
 
